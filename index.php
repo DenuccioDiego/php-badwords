@@ -1,8 +1,7 @@
 <?php 
 
      $str = 'sopra la panca la capra campa sopra la panca la capra campa sopra la panca la capra campa sopra la panca la capra campa sopra la panca la capra campa';
-     $la = 'la';
-     $parola_da_filtrare = $_GET['la']; 
+      
 ?>
 
 
@@ -28,8 +27,9 @@
                echo "Lunghezza_str: {$lunghezza_str}". '<br>';
                
                
-
-               $filter_word = str_replace($parola_da_filtrare, '*', $str);  
+               $parola_da_filtrare = $_GET['nome'];
+               
+               $filter_word = str_replace($parola_da_filtrare, '***', $str);  
                echo $filter_word. '<br>';
 
                $lunghezza_str = strlen($filter_word);
